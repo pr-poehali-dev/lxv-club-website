@@ -135,14 +135,13 @@ const Index = () => {
       </header>
 
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <div className="absolute inset-0 w-full h-full overflow-hidden bg-deep-charcoal">
           <iframe
-            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            style={{ aspectRatio: '16/9', width: '100vw', height: '56.25vw', minHeight: '100vh', minWidth: '177.78vh' }}
-            src="https://www.youtube.com/embed/wzupEPTNpLI?autoplay=1&mute=1&loop=1&playlist=wzupEPTNpLI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] md:w-[177.78vh] md:h-[100vh] lg:w-[100vw] lg:h-[56.25vw] -translate-x-1/2 -translate-y-1/2 pointer-events-none scale-150 md:scale-100"
+            src="https://www.youtube.com/embed/wzupEPTNpLI?autoplay=1&mute=1&loop=1&playlist=wzupEPTNpLI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
             title="LXV Club"
-            allow="autoplay; encrypted-media"
-            allowFullScreen
+            allow="autoplay; encrypted-media; fullscreen"
+            loading="eager"
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -161,26 +160,35 @@ const Index = () => {
       <section className="py-20 px-6 bg-card">
         <div className="container mx-auto max-w-5xl">
           <h3 className="text-4xl text-center mb-12 text-primary">Как это работает</h3>
-          <div className="flex justify-center items-center gap-4 md:gap-8">
-            <div className="text-center group cursor-pointer animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <div className="flex justify-center items-start gap-4 md:gap-8">
+            <div className="text-center group cursor-pointer animate-fade-in relative" style={{ animationDelay: '0.1s' }}>
               <div className="w-20 h-20 md:w-32 md:h-32 rounded-full border-2 border-primary/40 flex items-center justify-center mb-4 mx-auto group-hover:border-primary group-hover:scale-110 transition-all duration-300">
                 <span className="text-4xl md:text-6xl text-primary font-light">1</span>
               </div>
-              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none">Заявка</p>
+              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none mb-2">Заявка</p>
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-background/95 border border-primary/20 rounded-lg p-3 text-xs text-muted-foreground font-light z-10">
+                Клуб доступен только по предварительной заявке для сохранения приватности
+              </div>
             </div>
-            <div className="text-primary text-2xl md:text-4xl pb-8">→</div>
-            <div className="text-center group cursor-pointer animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="text-primary text-2xl md:text-4xl pt-8">→</div>
+            <div className="text-center group cursor-pointer animate-fade-in relative" style={{ animationDelay: '0.3s' }}>
               <div className="w-20 h-20 md:w-32 md:h-32 rounded-full border-2 border-primary/40 flex items-center justify-center mb-4 mx-auto group-hover:border-primary group-hover:scale-110 transition-all duration-300">
                 <span className="text-4xl md:text-6xl text-primary font-light">2</span>
               </div>
-              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none">Знакомство</p>
+              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none mb-2">Знакомство</p>
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-background/95 border border-primary/20 rounded-lg p-3 text-xs text-muted-foreground font-light z-10">
+                После одобрения приглашаем на экскурсию и встречу с менеджером клуба
+              </div>
             </div>
-            <div className="text-primary text-2xl md:text-4xl pb-8">→</div>
-            <div className="text-center group cursor-pointer animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            <div className="text-primary text-2xl md:text-4xl pt-8">→</div>
+            <div className="text-center group cursor-pointer animate-fade-in relative" style={{ animationDelay: '0.5s' }}>
               <div className="w-20 h-20 md:w-32 md:h-32 rounded-full border-2 border-primary/40 flex items-center justify-center mb-4 mx-auto group-hover:border-primary group-hover:scale-110 transition-all duration-300">
                 <span className="text-4xl md:text-6xl text-primary font-light">3</span>
               </div>
-              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none">Членство</p>
+              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none mb-2">Членство</p>
+              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-background/95 border border-primary/20 rounded-lg p-3 text-xs text-muted-foreground font-light z-10">
+                Пробуете клубную коллекцию и обсуждаем индивидуальные привилегии
+              </div>
             </div>
           </div>
         </div>
