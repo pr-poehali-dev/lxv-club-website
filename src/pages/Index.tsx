@@ -138,9 +138,9 @@ const Index = () => {
         <div className="absolute inset-0 w-full h-full overflow-hidden bg-deep-charcoal">
           <iframe
             className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] md:w-[177.78vh] md:h-[100vh] lg:w-[100vw] lg:h-[56.25vw] -translate-x-1/2 -translate-y-1/2 pointer-events-none scale-150 md:scale-100"
-            src="https://www.youtube.com/embed/wzupEPTNpLI?autoplay=1&mute=1&loop=1&playlist=wzupEPTNpLI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+            src="https://www.youtube.com/embed/wzupEPTNpLI?autoplay=1&mute=1&loop=1&playlist=wzupEPTNpLI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&iv_load_policy=3&disablekb=1&fs=0&cc_load_policy=0"
             title="LXV Club"
-            allow="autoplay; encrypted-media; fullscreen"
+            allow="autoplay; encrypted-media"
             loading="eager"
           />
           <div className="absolute inset-0 bg-black/50" />
@@ -326,11 +326,50 @@ const Index = () => {
       </section>
 
       <section className="py-20 px-6">
-        <div className="container mx-auto max-w-5xl">
+        <div className="container mx-auto max-w-6xl">
           <h3 className="text-4xl text-center mb-6 text-primary">Атмосфера клуба LXV</h3>
           <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto font-light">
             Клуб разделён на особые зоны. Каждое пространство — это отдельное настроение и впечатление
           </p>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+            <div className="col-span-2 row-span-2 overflow-hidden rounded-lg group">
+              <img 
+                src="https://cdn.poehali.dev/files/ef385df4-0913-4801-a831-ee33546c95ca.jpg" 
+                alt="Интерьер клуба"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg group">
+              <img 
+                src="https://cdn.poehali.dev/files/cfe00087-6319-4300-999b-f06d21615ccf.jpg" 
+                alt="Панорамный вид"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg group">
+              <img 
+                src="https://cdn.poehali.dev/files/f02e0615-9f07-434d-98b5-cde3acff1cc1.jpg" 
+                alt="Библиотека"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg group">
+              <img 
+                src="https://cdn.poehali.dev/files/f510a7e8-b64e-4a2d-ae06-fc6ee0b88dd2.jpg" 
+                alt="Винная комната"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+            <div className="overflow-hidden rounded-lg group">
+              <img 
+                src="https://cdn.poehali.dev/files/2c43c366-fc34-41eb-97f7-ac616ef400c4.jpg" 
+                alt="Лоунж зона"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-2 gap-6">
             {zones.map((zone, index) => (
               <Card key={index} className="border-primary/20 hover:border-primary/60 transition-all bg-card/80 backdrop-blur">
