@@ -148,9 +148,6 @@ const Index = () => {
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
           <h2 className="text-6xl md:text-8xl mb-6 text-warm-beige tracking-wider">LXV</h2>
-          <p className="text-xl md:text-2xl mb-8 text-warm-beige/90 font-light">
-            Закрытый клуб на 65 этаже в Москва Сити
-          </p>
           <Button 
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground text-lg px-8"
@@ -164,40 +161,43 @@ const Index = () => {
       <section className="py-20 px-6 bg-card">
         <div className="container mx-auto max-w-5xl">
           <h3 className="text-4xl text-center mb-12 text-primary">Как это работает</h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-background border-primary/20 hover:border-primary/40 transition-all">
-              <CardContent className="pt-8 text-center">
-                <div className="text-5xl mb-4 text-primary">01</div>
-                <h4 className="text-xl mb-4 font-light">Заявка</h4>
-                <p className="text-muted-foreground font-light leading-relaxed">
-                  Клуб доступен только по предварительной заявке — это позволяет сохранить приватность и атмосферу
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-background border-primary/20 hover:border-primary/40 transition-all">
-              <CardContent className="pt-8 text-center">
-                <div className="text-5xl mb-4 text-primary">02</div>
-                <h4 className="text-xl mb-4 font-light">Знакомство</h4>
-                <p className="text-muted-foreground font-light leading-relaxed">
-                  После одобрения приглашаем вас на встречу: экскурсия, знакомство с менеджером, ответы на вопросы
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-background border-primary/20 hover:border-primary/40 transition-all">
-              <CardContent className="pt-8 text-center">
-                <div className="text-5xl mb-4 text-primary">03</div>
-                <h4 className="text-xl mb-4 font-light">Членство</h4>
-                <p className="text-muted-foreground font-light leading-relaxed">
-                  Пробуете клубную коллекцию, и если формат подходит, обсуждаем индивидуальные привилегии
-                </p>
-              </CardContent>
-            </Card>
+          <div className="flex justify-center items-center gap-4 md:gap-8">
+            <div className="text-center group cursor-pointer animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="w-20 h-20 md:w-32 md:h-32 rounded-full border-2 border-primary/40 flex items-center justify-center mb-4 mx-auto group-hover:border-primary group-hover:scale-110 transition-all duration-300">
+                <span className="text-4xl md:text-6xl text-primary font-light">1</span>
+              </div>
+              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none">Заявка</p>
+            </div>
+            <div className="text-primary text-2xl md:text-4xl pb-8">→</div>
+            <div className="text-center group cursor-pointer animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="w-20 h-20 md:w-32 md:h-32 rounded-full border-2 border-primary/40 flex items-center justify-center mb-4 mx-auto group-hover:border-primary group-hover:scale-110 transition-all duration-300">
+                <span className="text-4xl md:text-6xl text-primary font-light">2</span>
+              </div>
+              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none">Знакомство</p>
+            </div>
+            <div className="text-primary text-2xl md:text-4xl pb-8">→</div>
+            <div className="text-center group cursor-pointer animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <div className="w-20 h-20 md:w-32 md:h-32 rounded-full border-2 border-primary/40 flex items-center justify-center mb-4 mx-auto group-hover:border-primary group-hover:scale-110 transition-all duration-300">
+                <span className="text-4xl md:text-6xl text-primary font-light">3</span>
+              </div>
+              <p className="text-xs md:text-sm text-muted-foreground font-light max-w-[100px] md:max-w-none">Членство</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 px-6">
-        <div className="container mx-auto max-w-6xl">
+      <section id="about" className="py-20 px-6 relative overflow-hidden">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full hidden lg:block">
+          <div className="relative w-full h-full">
+            <img 
+              src="https://cdn.poehali.dev/files/b0092c2f-dc6d-4a71-8ef3-892e5dd20d82.jpg" 
+              alt="LXV Interior"
+              className="absolute inset-0 w-full h-full object-cover opacity-20"
+              style={{ clipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0 100%)' }}
+            />
+          </div>
+        </div>
+        <div className="container mx-auto max-w-6xl relative z-10">
           <h3 className="text-4xl text-center mb-6 text-primary">
             LXV — закрытый клуб на 65 этаже
           </h3>
@@ -205,7 +205,14 @@ const Index = () => {
             С захватывающим видом на исторический центр Москвы — это камерность, безопасность, безупречный стиль и индивидуальный подход
           </p>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="group cursor-pointer border-primary/20 hover:border-primary/60 transition-all bg-card/50 backdrop-blur">
+            <Card className="group cursor-pointer border-primary/20 hover:border-primary/60 transition-all bg-card/90 backdrop-blur overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/7692d5d9-c092-4b54-9229-82e7d11b7a9c.jpg" 
+                  alt="Привилегии и членство"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
               <CardContent className="p-8">
                 <Icon name="Key" className="mb-4 text-primary" size={40} />
                 <h4 className="text-2xl mb-3 font-light">Привилегии и членство</h4>
@@ -214,7 +221,14 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="group cursor-pointer border-primary/20 hover:border-primary/60 transition-all bg-card/50 backdrop-blur">
+            <Card className="group cursor-pointer border-primary/20 hover:border-primary/60 transition-all bg-card/90 backdrop-blur overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/43431a51-06a0-4d5f-b0c2-59b6e3fd71db.jpg" 
+                  alt="События и культура"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
               <CardContent className="p-8">
                 <Icon name="Calendar" className="mb-4 text-primary" size={40} />
                 <h4 className="text-2xl mb-3 font-light">События и культура</h4>
@@ -223,7 +237,14 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="group cursor-pointer border-primary/20 hover:border-primary/60 transition-all bg-card/50 backdrop-blur">
+            <Card className="group cursor-pointer border-primary/20 hover:border-primary/60 transition-all bg-card/90 backdrop-blur overflow-hidden">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/84485f27-bc8e-4a02-95e2-5bb02fb4814f.jpg" 
+                  alt="Атмосфера клуба"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
               <CardContent className="p-8">
                 <Icon name="Sparkles" className="mb-4 text-primary" size={40} />
                 <h4 className="text-2xl mb-3 font-light">Атмосфера клуба</h4>
