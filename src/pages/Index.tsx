@@ -135,10 +135,17 @@ const Index = () => {
       </header>
 
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center brightness-50"
-          style={{ backgroundImage: `url('https://cdn.poehali.dev/files/b7da8241-ec52-4b5a-9e78-fbe49f868000.png')` }}
-        />
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <iframe
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            style={{ aspectRatio: '16/9', width: '100vw', height: '56.25vw', minHeight: '100vh', minWidth: '177.78vh' }}
+            src="https://www.youtube.com/embed/wzupEPTNpLI?autoplay=1&mute=1&loop=1&playlist=wzupEPTNpLI&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"
+            title="LXV Club"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
           <h2 className="text-6xl md:text-8xl mb-6 text-warm-beige tracking-wider">LXV</h2>
           <p className="text-xl md:text-2xl mb-8 text-warm-beige/90 font-light">
