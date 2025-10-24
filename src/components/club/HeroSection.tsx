@@ -10,7 +10,7 @@ export const HeroSection = ({ onApplicationOpen }: HeroSectionProps) => {
       <div className="absolute inset-0 w-full h-full overflow-hidden bg-deep-charcoal">
         <iframe
           className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover scale-150"
-          src="https://vk.com/video_ext.php?oid=-221057625&id=456239051&hd=2&autoplay=1&loop=1"
+          src="https://drive.google.com/file/d/1SKTKNsVX2ZW05tet4H-nwRqOGJJX9CDA/preview?autoplay=1&loop=1"
           allow="autoplay; encrypted-media; fullscreen; picture-in-picture; screen-wake-lock;"
           allowFullScreen
         />
