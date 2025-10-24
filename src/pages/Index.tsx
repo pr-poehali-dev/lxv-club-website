@@ -136,13 +136,17 @@ const Index = () => {
 
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full overflow-hidden bg-deep-charcoal">
-          <iframe
-            className="absolute top-1/2 left-1/2 w-[100vw] h-[100vh] md:w-[177.78vh] md:h-[100vh] lg:w-[100vw] lg:h-[56.25vw] -translate-x-1/2 -translate-y-1/2 pointer-events-none scale-150 md:scale-100"
-            src="https://rutube.ru/play/embed/9af13483e97c3185781e3565e6c13216"
-            title="LXV Club"
-            allow="autoplay; encrypted-media; fullscreen"
-            loading="eager"
-          />
+          <video
+            className="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+          >
+            <source src="/video.mp4" type="video/mp4" />
+            Ваш браузер не поддерживает видео
+          </video>
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
